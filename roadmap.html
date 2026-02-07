@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Portal</title>
+    <link rel="stylesheet" href="styles/Styles.css">
+    <link rel="stylesheet" href="styles/Components.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Career<span>Portal</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Videos</a></li>
+            <li><a href="roadmap.html" class="active">Roadmap</a></li>
+            <li><a href="profile.html">Sync Profile</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section id="job-overview" class="dashboard-card">
+            <h2 id="target-title">Target Job: Pending...</h2>
+            <div class="stats-grid">
+                <div class="stat-item">Avg Salary: <span id="avg-salary">--</span></div>
+                <div class="stat-item">Market Demand: <span id="demand">--</span></div>
+            </div>
+        </section>
+
+        <section class="roadmap-section">
+            <h2>Your Step-by-Step Path</h2>
+            <div id="roadmap-timeline" class="timeline">
+                </div>
+        </section>
+
+        <section class="skill-gap-tool">
+            <h3>Skill Gap Analysis</h3>
+            <ul id="skill-list">
+                </ul>
+        </section>
+    </main>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/roadmap-engine.js"></script>
+</body>
+</html>

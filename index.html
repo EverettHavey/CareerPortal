@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Portal</title>
+    <link rel="stylesheet" href="styles/Styles.css">
+    <link rel="stylesheet" href="styles/Components.css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="logo">Career<span>Portal</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="roadmap.html">Roadmap</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Connect with LinkedIn to view progress</h1>
+                <p>Sync your profile to unlock personalized career paths and skill gap analysis.</p>
+                <button id="linkedin-sync-btn" class="btn-primary">Connect LinkedIn</button>
+            </div>
+        </section>
+
+        <div class="content-grid">
+            <section class="progress-container">
+                <h2>Your Progress</h2>
+                <div class="progress-card">
+                    <div id="overall-progress-bar">
+                        <div class="progress-fill" style="width: 0%;"></div>
+                    </div>
+                    <p><span id="percent-complete">0</span>% of milestones mastered</p>
+                </div>
+            </section>
+
+            <section class="video-suggestions">
+                <h2>Video Suggestions</h2>
+                <div id="video-feed" class="video-scroll-area">
+                    <p class="placeholder-text">Sync your profile to see tailored tutorials.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy;Career Portal 2026. WDD330.</p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/youtube-api.js"></script>
+    <script src="scripts/linkedin-api.js"></script>
+</body>
+</html>

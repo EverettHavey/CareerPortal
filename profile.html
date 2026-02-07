@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Portal</title>
+    <link rel="stylesheet" href="styles/Styles.css">
+    <link rel="stylesheet" href="styles/Components.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Career<span>Portal</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Videos</a></li>
+            <li><a href="roadmap.html">Roadmap</a></li>
+            <li><a href="profile.html" class="active">Sync Profile</a></li>
+        </ul>
+    </nav>
+
+    <main class="container profile-layout">
+        <section class="sync-card">
+            <div id="profile-status">
+                <img src="placeholder-user.png" alt="Profile" id="user-img">
+                <h2 id="user-name">Welcome!</h2>
+                <p id="user-title">Please sync to get started.</p>
+                <button id="linkedin-login-btn" class="btn-linkedin">Sync with LinkedIn</button>
+            </div>
+        </section>
+
+        <section class="optimization-card">
+            <h3>Profile Suggestions</h3>
+            <div id="suggestions-box">
+                <p>Sync your profile to see how to improve your headline and skills for your target role.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/linkedin-api.js"></script>
+</body>
+</html>

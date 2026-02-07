@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Source+Sans+Pro:wght@400;600&display=swap');
+
+:root {
+    --primary-blue: #0077B5;
+    --growth-green: #28A745;
+    --neutral-white: #FFFFFF;
+    --bg-gray: #f4f7f9;
+    --text-dark: #333333;
+    --heading-font: 'Inter', sans-serif;
+    --body-font: 'Source Sans Pro', sans-serif;
+}
+
+/* MY GLOBAL STYLES */
+body {
+    margin: 0;
+    font-family: var(--body-font);
+    background-color: var(--bg-gray);
+    color: var(--text-dark);
+}
+
+h1, h2, h3 {
+    font-family: var(--heading-font);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.navbar {
+    background-color: var(--primary-blue);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.logo span {
+    font-weight: bold;
+    color: var(--growth-green);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+}

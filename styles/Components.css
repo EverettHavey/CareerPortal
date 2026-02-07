@@ -1,0 +1,77 @@
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('hero-bg.jpg'); /* Add your image later */
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.btn-primary {
+    background-color: var(--growth-green);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+}
+
+#overall-progress-bar {
+    background-color: #ddd;
+    border-radius: 10px;
+    height: 20px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.progress-fill {
+    background-color: var(--growth-green);
+    height: 100%;
+    transition: width 0.5s ease-in-out;
+}
+
+.video-item {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.video-item img {
+    width: 100%;
+    height: auto;
+}
+
+.video-info {
+    padding: 15px;
+}
+
+.timeline {
+    border-left: 4px solid var(--primary-blue);
+    padding-left: 20px;
+    margin-left: 10px;
+}
+
+.milestone {
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.milestone::before {
+    content: '';
+    position: absolute;
+    left: -28px;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    background: var(--growth-green);
+    border-radius: 50%;
+}
