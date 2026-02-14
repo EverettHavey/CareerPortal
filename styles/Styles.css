@@ -65,3 +65,51 @@ h1, h2, h3 {
         grid-template-columns: 1fr;
     }
 }
+
+#roadmap-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.roadmap-step {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 5px solid #0077b5; /* LinkedIn Blue */
+}
+
+.step-circle {
+    width: 40px;
+    height: 40px;
+    background: #0077b5;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.roadmap-connector {
+    width: 2px;
+    height: 30px;
+    background: #ccc;
+    margin: 5px 0;
+}
+
+.chip {
+    display: inline-block;
+    background: #e1e9ee;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin: 4px 2px;
+}

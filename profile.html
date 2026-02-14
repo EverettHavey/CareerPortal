@@ -20,7 +20,7 @@
     <main class="container profile-layout">
         <section class="sync-card">
             <div id="profile-status">
-                <img src="placeholder-user.png" alt="Profile" id="user-img">
+                <img src="https://ui-avatars.com/api/?name=User&background=0077b5&color=fff" alt="Profile" id="user-img">
                 <h2 id="user-name">Welcome!</h2>
                 <p id="user-title">Please sync to get started.</p>
                 <button id="linkedin-login-btn" class="btn-linkedin">Sync with LinkedIn</button>
@@ -34,6 +34,26 @@
             </div>
         </section>
     </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const syncBtn = document.getElementById('linkedin-login-btn');
+
+            if (syncBtn) {
+                syncBtn.addEventListener('click', () => {
+                    loginWithLinkedIn();
+                });
+            }
+
+            const userData = JSON.parse(localStorage.getItem('careerPortal_User'));
+            if (userData && userData.isSynced) {
+                document.getElementById('user-name').innerText = `Hello, ${userData.firstName}!`;
+                document.getElementById('user-title').innerText = `Target: ${userData.targetGoal}`;
+                document.getElementById('suggestions-box').innerHTML = `<p>Great job! Your profile is synced. Head over to the <strong>Roadmap</strong> to see your path.</p>`;
+
+                document.getElementById('user-img').src = `https://ui-avatars.com/api/?name=${userData.firstName}&background=28a745&color=fff`;
+            }
+        });
+    </script>
 
     <script src="scripts/main.js"></script>
     <script src="scripts/linkedin-api.js"></script>
