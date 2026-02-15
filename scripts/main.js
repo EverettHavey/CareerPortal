@@ -23,12 +23,10 @@ function updateProgressUI() {
     if (!dataString) return;
 
     const userData = JSON.parse(dataString);
-    
-    // Select elements carefully
+
     const progressFill = document.querySelector('.progress-fill');
     const percentLabel = document.getElementById('percent-complete');
 
-    // THE SHIELD: If these aren't found, we stop immediately.
     if (!progressFill || !percentLabel) {
         console.warn("UI Elements for progress not found on this page. Skipping update.");
         return; 
@@ -38,7 +36,6 @@ function updateProgressUI() {
     const total = userData.totalMilestones || 4;
     const percentage = (completedCount / total) * 100;
 
-    // Apply updates safely
     progressFill.style.width = `${percentage}%`;
     percentLabel.textContent = Math.round(percentage);
 }
