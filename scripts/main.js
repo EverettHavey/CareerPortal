@@ -1,6 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
     initApp();
     updateProgressUI();
+
+    const userData = JSON.parse(localStorage.getItem('careerPortal_User'));
+    if (userData && userData.isSynced && userData.targetGoal) {
+        console.log(`Loading videos for: ${userData.targetGoal}`);
+
+        if (typeof fetchCareerVideos === "function") {
+            fetchCareerVideos(userData.targetGoal);
+        }
+    }
 });
 
 function initApp() {
@@ -23,12 +32,11 @@ function updateProgressUI() {
     if (!dataString) return;
 
     const userData = JSON.parse(dataString);
-
     const progressFill = document.querySelector('.progress-fill');
     const percentLabel = document.getElementById('percent-complete');
 
     if (!progressFill || !percentLabel) {
-        console.warn("UI Elements for progress not found on this page. Skipping update.");
+        console.log("Progress UI skipped for this page."); 
         return; 
     }
 
